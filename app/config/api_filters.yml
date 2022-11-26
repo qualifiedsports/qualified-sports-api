@@ -1,0 +1,67 @@
+services:
+    # Measurment Filters
+#    measurement.order_filter:
+#        parent: 'api_platform.doctrine.orm.order_filter'
+#        arguments: [ { id: ~, type: ~, value: ~, created: ~, updated: ~ } ]
+#        tags: [ 'api_platform.filter' ]
+#    measurement.search_filter:
+#        parent: 'api_platform.doctrine.orm.search_filter'
+#        arguments: [ { type: 'exact', user: 'exact' } ]
+#        tags: [ 'api_platform.filter' ]
+#    measurement.date_filter:
+#        parent: 'api_platform.doctrine.orm.date_filter'
+#        arguments: [ { created: ~ } ]
+#        tags: [ 'api_platform.filter' ]
+    # Measurement Types filters
+#    measurement_type.search_filter:
+#        parent: 'api_platform.doctrine.orm.search_filter'
+#        arguments: [ { type: 'exact' } ]
+#        tags: [ 'api_platform.filter' ]
+    # Recommendation filters
+    recommendation.order_filter:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments: [ { id: ~, type: ~, value: ~, created: ~, updated: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    recommendation.search_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { type: 'exact', user: 'exact' } ]
+        tags: [ 'api_platform.filter' ]
+    recommendation.date_filter:
+        parent: 'api_platform.doctrine.orm.date_filter'
+        arguments: [ { created: ~, updated: ~, at: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    # Notification filters
+    notification.order_filter:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments: [ { id: ~, notification: ~, created: ~, updated: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    notification.search_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { user: 'exact' } ]
+        tags: [ 'api_platform.filter' ]
+    notification.date_filter:
+        parent: 'api_platform.doctrine.orm.date_filter'
+        arguments: [ { created: ~, updated: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    # diagnostic filters
+    diagnostic.order_filter:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments: [ { id: ~, value: ~, created: ~, updated: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    diagnostic.search_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { user: 'exact' } ]
+        tags: [ 'api_platform.filter' ]
+    diagnostic.date_filter:
+        parent: 'api_platform.doctrine.orm.date_filter'
+        arguments: [ { created: ~, updated: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    # User filters
+    user.order_filter:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments: [ { id: ~, email: ~, fullname: ~, username: ~ } ]
+        tags: [ 'api_platform.filter' ]
+    user.search_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { id: 'exact', fullname: 'partial' } ]
+        tags: [ 'api_platform.filter' ]

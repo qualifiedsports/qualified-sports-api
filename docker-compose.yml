@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     platform: linux/amd64
+     volumes:
+       - db_data:/var/lib/mysql
+     environment:
+       MYSQL_ROOT_PASSWORD: toor
+       MYSQL_DATABASE: my-doctor
+       MYSQL_USER: my-doctor
+       MYSQL_PASSWORD: my-doctor
+     ports:
+      - 3306:3306
+
+volumes:
+    db_data:
